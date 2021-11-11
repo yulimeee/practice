@@ -1,0 +1,129 @@
+.t, .m{display: none;}
+/* ---------- ---------- main>.banner ---------- ---------- */
+main{
+    position:relative;
+    padding-top:8.4rem;
+    background: #fff;
+}
+main>aside.m_banner{
+    margin-bottom:5rem;
+    max-height:50rem;
+    padding-bottom:0.1rem;
+}
+@media only screen and (min-width:960px) and (max-width:1199px){
+    main>aside.m_banner{margin-bottom:0;}
+}
+main>aside.m_banner>.centerBox{
+    margin:0 auto;
+    max-width:120rem;
+
+}
+main>aside.m_banner>.centerBox>video{
+    width:100%; max-height:47.9rem;
+}
+
+/* ---------- ---------- main>.collections ---------- ---------- */
+main>section.collections{
+    margin-top: 8rem;
+    margin-bottom:8rem;
+    background: #fff;
+}
+main>section.collections>h1{
+    font:bold 3rem/5rem sans-serif;
+    text-align: center;
+    border-bottom:0.3rem solid #e94040;
+    width:10rem;
+    margin: 0 auto;
+}
+main>section.collections>ul.centerBox{
+    display: flex;
+    padding-top: 3rem;
+}
+main>section.collections>ul.centerBox>li{
+    position:relative;
+    flex:0 1 25%;
+    overflow: hidden;
+    max-height:28.9rem;
+}
+/* ---------- img.bg ---------- */
+main>section.collections>ul.centerBox>li>a>img.bg{
+    width:100%;
+    height:100%;
+}
+
+/* ---------- img.bg_over ---------- */
+main>section.collections>ul.centerBox>li>a>img.bg_over{
+    position:absolute; top:0; left:0;
+    width:100%;
+    opacity:0;
+    transition:0.5s ease;
+}
+
+/* ---------- main>.products 이벤트 ---------- */
+main>section.collections>ul.centerBox>li:hover>a>img.bg_over{
+    opacity: 1;
+}
+
+/* ---------- ---------- main>.middle ---------- ---------- */
+main>section.middle>div.centerBox{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ---------- .introduce ---------- */
+section.middle section.introduce{
+    width:120rem;
+    margin-bottom:8rem;
+}
+section.middle section.introduce>h1{
+    font:bold 3rem/5rem sans-serif;
+    text-align: center;
+    border-bottom:0.3rem solid #e94040;
+    width:20rem;
+    margin: 0 auto;
+}
+section.middle section.introduce>dl{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top:3rem;
+}
+section.middle section.introduce>dl>div{
+    margin-bottom:5rem;
+    height:29.4rem; width:29rem;
+    background: #222;
+}
+section.middle section.introduce>dl>div dt{
+    padding-left:2rem;
+}
+section.middle section.introduce>dl>div dt>a{
+    font-size:1.6rem; line-height:6.4rem;
+    font-weight: bold;
+    color:#fff;
+}
+section.middle section.introduce>dl>div dd{
+    margin-bottom:3.5rem;
+}
+section.middle section.introduce>dl>div dd>a{
+    font-size:1.4rem; line-height:2.2rem;
+    color:#fff;
+}
+section.middle section.introduce>dl>div dd:first-of-type{
+    padding-left:2rem;
+}
+section.middle section.introduce>dl>div dd img{
+    width:100%;
+}
+
+/* ---------- ---------- main>.scroll_top ---------- ---------- */
+main>div>p.scroll_top{
+    position: fixed; left:calc(50% + 55rem); bottom:5rem; z-index: 101;
+    width:5rem; height:5rem;
+    background: url(../../imgs/main/btn_top.png) no-repeat 0 0;
+    cursor: pointer;
+}
+main>div>p.scroll_top.on{
+    position:absolute;
+    bottom:-8rem;
+}

@@ -1,0 +1,112 @@
+.w, .t{display: none;}
+/* ---------- ---------- main 배너 ---------- ---------- */
+main{
+    padding-top:6rem;
+    background: #fff;
+}
+main>aside.m_banner{
+    padding-bottom:0.1rem;
+    max-height:48.1rem;
+}
+main>aside.m_banner>.centerBox{
+    margin:0 auto;
+    max-width:120rem;
+}
+main>aside.m_banner>.centerBox>video{
+    width:100%; max-height:47.9rem;
+}
+/* ---------- ---------- main>.collections ---------- ---------- */
+main>section.collections{
+    margin-top: 5rem;
+    margin-bottom:5rem;
+    background: #fff;
+}
+main>section.collections>h1{
+    font:bold 2.4rem/5rem sans-serif;
+    text-align: center;
+    border-bottom:0.3rem solid #e94040;
+    width:20rem;
+    margin: 0 auto;
+}
+main>section.collections>ul.centerBox{
+    display: flex;
+    flex-wrap:wrap;
+}
+main>section.collections>ul.centerBox>li{
+    position:relative;
+    flex:0 1 50%;
+}
+/* ---------- img.bg ---------- */
+main>section.collections>ul.centerBox>li>a>img.bg{
+    width:100%;
+    height:82%;
+}
+/* ---------- img.bg_over ---------- */
+main>section.collections>ul.centerBox>li>a>img.bg_over{
+    position:absolute; top:0; left:0;
+    width:100%;
+    opacity:0;   
+    transition:0.5s ease;
+}
+
+/* ---------- main>..collections 이벤트 ---------- */
+main>section.collections>ul.centerBox>li:hover>a>img.bg_over{
+    opacity: 1;
+}
+main>section.collections>ul.centerBox>li:hover>a>img.object{
+    right:0;
+}
+
+/* ---------- ---------- main>.middle ---------- ---------- */
+section.middle>div.centerBox{
+    padding:0 1.5rem;
+}
+/* ---------- .introduce ---------- */
+section.middle section.introduce{
+    margin-top:5rem;
+    width:100%;
+    margin: 0 auto;
+}
+section.middle section.introduce>h1{
+    font:bold 3rem/5rem sans-serif;
+    text-align: center;
+    border-bottom:0.3rem solid #e94040;
+    width:20rem;
+    margin: 0 auto;
+}
+section.middle section.introduce>dl{
+    width:100%;
+}
+section.middle section.introduce>dl>div{
+    margin-bottom:3rem;
+    background: #222;
+}
+section.middle section.introduce>dl>div> dt{}
+section.middle section.introduce>dl>div dt>a{
+    padding-left:1rem;
+    font-size:1.6rem; line-height:6.4rem;
+    font-weight: bold;
+    color:#fff;
+}
+section.middle section.introduce>dl>div>dd{
+    margin-bottom:3.5rem;
+    font-size:1.4rem; line-height:2.2rem;
+    color:#004ba9;
+}
+section.middle section.introduce>dl>div dd:first-of-type{
+    padding-left: 1rem;
+}
+section.middle section.introduce>dl>div dd>a{
+    font-size:1.4rem; line-height:2.2rem;
+    color:#fff;
+}
+section.middle section.introduce>dl>div>dd img{
+    width:100%;
+}
+
+main>div>p.scroll_top{
+    position: fixed; right:1.5rem; bottom:5rem; z-index: 101;
+    width:5rem; height:5rem;
+    background: url(../../imgs/main/btn_top.png) no-repeat 0 0;
+    cursor: pointer;
+}

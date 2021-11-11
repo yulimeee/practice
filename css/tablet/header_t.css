@@ -1,0 +1,186 @@
+.w, .t{display: none;}
+
+html, body{
+    margin:0; padding:0;
+}
+header{
+    position: fixed; top:0; left:0; z-index: 100;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.5);    
+    width:100%;
+    background:#fff;
+}
+header>.centerBox{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:6rem;
+}
+
+header>.centerBox>h1{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%) scale(0.8, 0.8);
+}
+header>.centerBox>h1>img{
+    width:13rem; 
+}
+
+/* ---------------------------------------------------------- nav -------------------------------------------------------------------------- */
+/* --------------- nav 바로가기 ---------- */
+header>.centerBox>.bg{
+    display:none;
+    position:fixed; left:0; top:0;
+    width:100vw; height:100vh; 
+    background:rgba(0,0,0,0.5);
+}
+header>.centerBox>.bg.on{
+    display: block;
+}
+
+header>.centerBox>p.direct_nav{
+    margin-left:2rem;
+    width:2.3rem; height:1.5rem;
+    background:url(../../imgs/header/btn_gnb_mobile.png) no-repeat 0 0/2.3rem 1.5rem;
+}
+
+/* ------------- 실제 네비게이터 ---------- */
+header>.centerBox>nav{
+    display: none;
+    position:fixed; top:0; left:-25.6rem; z-index:1000;
+    width:25.6rem; height:100vh;
+
+}
+header>.centerBox>nav>div.m{
+    padding:2.3rem 0 0 21.6rem;
+    width:4rem; height:3.7rem;
+    border-bottom:0.1rem solid #000d5f;
+    background:#07399c url(../../imgs/header/gnb_logo_m.png) no-repeat 2.5rem 2.3rem/10.7rem 1.5rem;
+}
+header>.centerBox>nav>div.m>p{
+    width:1.8rem; height:1.5rem;
+    background:#07399c url(../../imgs/header/ic_home_m.png) no-repeat 0 0/1.8rem 1.5rem;
+}
+/* ---------- nav 닫기 ---------- */
+header>.centerBox>nav>p.close_nav{
+    position:absolute; top:1.8rem; left:26.9rem;
+    width:2.5rem; height:2.5rem;
+    background: url(../../imgs/header/btn_close_fade.png) no-repeat 0.5rem 0.5rem/1.5rem 1.5rem;
+}
+/* ---------- dep1 ---------- */
+header>.centerBox>nav>.dep1{
+    width:25.6rem; height:100vh;
+    background: #07399c;
+}
+header>.centerBox>nav>.dep1>li{
+    border-bottom:0.1rem solid #000d5f;
+    background: url(../../imgs/header/bu_1depth_down.png) no-repeat 22.2rem 2.1rem/0.9rem 0.9rem;
+}
+header>.centerBox>nav>.dep1>li>a{
+    display:block;
+    padding-left:2.8rem;
+    font-size:1.5rem; line-height:5.1rem; font-weight:bold;
+    color:#fff;
+}
+/* ---------- dep2 ---------- */
+header>.centerBox>nav>.dep1>li>.dep2{
+    display: none;
+    margin-top:1.4rem;
+    padding:1.5rem 0;
+    background: #eceff1;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type)>.dep2>li:last-of-type>a{
+    position:relative;
+    display: block;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type)>.dep2>li:last-of-type>a:after{
+    position:absolute; top:50%; left:21.5rem;
+    content:"";
+    width:0.6rem; height:0.6rem;
+    border:0.2rem solid #000;
+    border-right:0 none;
+    border-bottom:0 none;
+    transform:rotate(225deg);
+}
+header>.centerBox>nav>.dep1>li:last-of-type>.dep2>li>a{
+    position:relative;
+    display: block;
+}
+header>.centerBox>nav>.dep1>li:last-of-type>.dep2>li>a:after{
+    position:absolute; top:1.5rem; left:21.5rem;
+    content:"";
+    width:0.6rem; height:0.6rem;
+    border:0.2rem solid #000;
+    border-right:0 none;
+    border-bottom:0 none;
+    transform:rotate(225deg);
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>a{
+    padding-left:2.8rem;
+    font-size:1.4rem; line-height:3.6rem; font-weight:bold; 
+    color:#07399c;
+}
+/* ---------- nav 이벤트 ---------- */
+/* header>.centerBox>p.direct_nav:active+nav{
+    display: block;
+} */
+
+header>.centerBox>nav>.dep1>li:hover>.dep2{
+    display: block;
+}
+header>.centerBox>nav>.dep1>li:hover{
+    background-image: url(../../imgs/header/bu_1depth_up.png);
+}
+header>.centerBox>nav>.dep1>li:hover>.dep2>li:hover>.dep3{
+    display: block;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type)>.dep2>li:first-of-type:hover{
+    background: #00a6ff;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type)>.dep2>li:first-of-type:hover>a{
+    color:#fff;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type)>.dep2>li:last-of-type>a:hover:after{
+    transform:rotate(45deg);
+}
+header>.centerBox>nav>.dep1>li:last-of-type>.dep2>li>a:hover:after{
+    transform:rotate(45deg);
+}
+
+/* ---------- ---------- util ---------- ---------- */
+header>.centerBox>div{
+    display: flex;
+    align-items: center;
+}
+header>.centerBox>div>dl{
+    width:4.6rem; height:3.4rem; text-align:center;
+}
+header>.centerBox>div>dl>dd{}
+header>.centerBox>div>dl>dd.on{
+    padding-top:1rem;
+    height:2.4rem;
+}
+header>.centerBox>div>dl>dd.on>a{
+    display: block;
+    font-size:1.2rem; line-height:1rem; font-weight:bold;
+    color:#222;
+}
+header>.centerBox>div>dl>dd.on>a>span{
+    display:block;
+    margin:0.4rem auto;
+    width:0.7rem; height:0.4rem;
+    background: url(../../imgs/header/country_off.png) no-repeat 0 0;;
+}
+header>.centerBox>div>dl>dd.off{
+    display: none;
+    margin-top:-0.1rem;
+    text-align: center;
+    font-size:1.2rem; line-height:3rem;
+    background: #fff;
+}
+header>.centerBox>div>dl>dd.off>a{
+    color:#444;
+}
+header>.centerBox>div>dl>dd.off:not(:last-of-type){
+    border-bottom:0 none;
+}

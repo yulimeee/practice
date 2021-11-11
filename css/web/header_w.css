@@ -1,0 +1,137 @@
+.t, .m{display: none;}
+.centerBox{max-width:120rem; margin:0 auto;}
+
+header{
+    position: fixed; top:0; left:0; z-index: 100;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.5);
+    width:100%;
+    background:#fff;
+}
+header>.centerBox{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top:2.2rem;
+    height:6.1rem;
+}
+@media only screen and (min-width:960px) and (max-width:1200px){
+    header>.centerBox{width:96rem;}
+}
+/* ---------- ---------- logo ---------- ---------- */
+header>.centerBox>h1{}
+header>.centerBox>h1>img{
+    position: absolute;
+    top:1.5rem;
+}
+/* ---------- ---------- nav ---------- ---------- */
+header>.centerBox>nav{}
+/* ---------- dep1 ---------- */
+header>.centerBox>nav>.dep1{
+    display: flex;
+}
+header>.centerBox>nav>.dep1>li{
+    position:relative;
+    height:6.1rem;
+}
+header>.centerBox>nav>.dep1>li:not(:last-of-type){
+    margin-right:7.6rem; 
+}
+@media only screen and (min-width:960px) and (max-width:1200px){
+    header>.centerBox>nav>.dep1>li:not(:last-of-type){margin-right:5.5rem;}
+}
+header>.centerBox>nav>.dep1>li>a{
+    position: relative;
+    display:block;
+    height:4rem;
+    font-size:1.6rem; line-height:3.6rem; font-weight:bold;
+    letter-spacing: -0.1rem;
+    color:#242424;
+}
+header>.centerBox>nav>.dep1>li>a:after{
+    position:absolute; bottom:0;
+    content:"";
+    display:none;
+    width:100%; height:0.3rem;
+    background: #e94040;
+}
+/* ---------- dep2 ---------- */
+header>.centerBox>nav>.dep1>li>.dep2{
+    display: none;
+    position: absolute; top:6.1rem; left:-2.5rem; 
+    width:18.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.3);
+    background: #fff;
+}
+header>.centerBox>nav>.dep1>li:last-of-type>.dep2{
+    left:-6rem;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li{
+    position:relative;
+    border-bottom:0 none;
+    height:4.3rem;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li:last-of-type{
+    border-bottom:0.1rem solid #07399c;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li:not(:first-of-type){
+    border-top-color:#03205f;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li>a{
+    position: relative; z-index: 100;
+    display: block;
+    padding-left:2.1rem;
+    font-size:1.4rem; line-height:4.3rem;
+    color:#222;
+}
+
+/* ---------- nav 이벤트 ---------- */
+header>.centerBox>nav>.dep1>li>a:hover:after{
+    display: block;
+}
+header>.centerBox>nav>.dep1>li:hover>.dep2{
+    display: block;
+}
+header>.centerBox>nav>.dep1>li>.dep2>li:hover>a{
+    color:#e94040;
+    font-weight: bold;
+}
+/* ---------- ---------- util ---------- ---------- */
+header>.centerBox>div{
+    display: flex;
+    align-items: flex-start;
+}
+
+header>.centerBox>div>dl{
+    width:4.6rem; height:3.4rem; text-align:center;
+}
+header>.centerBox>div>dl>dd{
+}
+header>.centerBox>div>dl>dd.on{
+    padding-top:1rem;
+    height:2.4rem;
+}
+header>.centerBox>div>dl>dd.on>a{
+    display: block;
+    font-size:1.2rem; line-height:1rem; font-weight:bold;
+    color:#222;
+}
+header>.centerBox>div>dl>dd.on>a>span{
+    display:block;
+    margin:0.4rem auto;
+    width:0.7rem; height:0.4rem;
+    background: url(../../imgs/header/country_off.png) no-repeat 0 0;;
+}
+header>.centerBox>div>dl>dd.off{
+    display: none;
+    margin-top:-0.1rem;
+    text-align: center;
+    font-size:1.2rem; line-height:3rem;
+    background: #fff;
+}
+header>.centerBox>div>dl>dd.off>a{
+    color:#444;
+}
+header>.centerBox>div>dl>dd.off:not(:last-of-type){
+    border-bottom:0 none;
+}

@@ -1,0 +1,108 @@
+.w{display: none;}
+
+footer>.f_top{
+    height:10rem;
+    background: #263238;
+}
+@media only screen and (min-width:960px) and (max-width:1200px){
+    footer .centerBox{width:96rem;}
+}
+footer div.centerBox{
+    margin:0 1.5rem;
+}
+/* ---------- ---------- .f_top ---------- ---------- */
+/* ---------- .util ---------- */
+.f_top>.centerBox>dl>.util{
+    display:flex;
+}
+.f_top>.centerBox>dl>.util>dd{
+    flex:0 0 auto;
+    position:relative;
+    font-size:1.4rem; line-height: 5.5rem;
+}
+.f_top>.centerBox>dl>.util>dd:not(:last-of-type){
+    margin-right:2rem;
+}
+.f_top>.centerBox>dl>.util>dd:after{
+    position:absolute; top:calc(50% - 0.6rem); right:-1rem;
+    content:"";
+    width:0; height:1.3rem;
+    border-right:0.1rem solid #a1a1a1;
+}
+.f_top>.centerBox>dl>.util>dd>a{
+    font-size:1rem;
+    color:#a1a1a1;
+}
+/* ---------- .sns ---------- */
+.f_top>.centerBox>dl>.sns{
+    display:flex;
+    float: left;
+    margin:0 auto 0 0.5rem;
+}
+.f_top>.centerBox>dl>.sns>dd:nth-of-type(1){
+    width:1.3rem; height:2.7rem;
+    background: url(../../imgs/footer/ic_facebook.png) no-repeat -1.7rem 0;
+}
+.f_top>.centerBox>dl>.sns>dd:nth-of-type(2){
+    margin-left:2rem;
+    width:2.2rem; height:2.7rem;
+    background: url(../../imgs/footer/ic_instagram.png) no-repeat -1.6rem 0;
+}
+.f_top>.centerBox>dl>.sns>dd:nth-of-type(3){
+    margin-left:2rem;
+    width:2.2rem; height:2.7rem;
+    background: url(../../imgs/footer/ic_ytb.png) no-repeat -1.6rem 0;
+}
+/* ---------- ---------- .f_bottom ---------- ---------- */
+.f_bottom{
+    padding-bottom:2.4rem;
+    background:#e9eaeb;
+}
+.f_bottom>div.centerBox{
+    padding-top:1.5rem;
+}
+/* ---------- logo ---------- */
+.f_bottom>div.centerBox>p>img{
+    width:11.5rem;
+}
+/* ---------- address ---------- */
+.f_bottom>div.centerBox>address{
+    margin-top:1rem;
+}
+.f_bottom>div.centerBox>address>p{
+    font-size:1rem; line-height:1.5rem;
+    color:#37474f;
+}
+.f_bottom>div.centerBox>address>p:nth-of-type(1){float:left}
+.f_bottom>div.centerBox>address>p:nth-of-type(2){
+    position:relative;
+    float:left;
+    margin-right:1.8rem;
+}
+.f_bottom>div.centerBox>address>p:nth-of-type(2):after{
+    position: absolute; top:0.3rem; right:-0.9rem;
+    content:"";
+    width:0; height:1rem;
+    border-right:0.1rem solid #667279;
+}
+.f_bottom>div.centerBox>address>p:nth-of-type(3){float:left}
+.f_bottom>div.centerBox>address>p:nth-of-type(4){clear: both;}
+
+/*법*/
+.f_bottom>div.centerBox>div.law{
+    position: relative;
+    top:5rem; left:-47rem;
+}
+.f_bottom>div.centerBox>div.law>dl>div.law_util{
+    display:flex;
+    justify-content: space-between;
+
+}
+.f_bottom>div.centerBox>div.law>dl>div.law_util>dd{
+    flex:0 0 auto;
+    padding: 1rem;
+}
+.f_bottom>div.centerBox>div.law>dl>div.law_util>dd>a{
+    font-size:1rem;
+    color:#61696d;
+}
